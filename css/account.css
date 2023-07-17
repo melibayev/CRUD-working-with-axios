@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, a, span button {
+  font-family: "montserrat";
+}
+
+button, i {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+  border: none;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+html, body {
+  height: 100%;
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  top: -100%;
+  transition: 0.5s;
+}
+
+.modal__content {
+  padding: 30px 60px;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+}
+
+form > input, form > label {
+  display: block;
+}
+form > label {
+  margin-bottom: 6px;
+}
+form .isMarried {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+form .isMarried label {
+  margin-bottom: 0;
+}
+form .isMarried input {
+  width: 20px;
+  height: 100%;
+  margin-bottom: 0;
+  box-shadow: none;
+}
+form input {
+  width: 100%;
+  padding: 8px 16px;
+  outline: none;
+  margin-bottom: 12px;
+}
+
+.form__btns {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+}
+.form__btns button {
+  padding: 8px 16px;
+}
+
+.modal__content__top {
+  display: flex;
+  align-items: center;
+  gap: 120px;
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+  margin-bottom: 32px;
+}
+.modal__content__top i {
+  font-size: 20px;
+}
+
+#home {
+  padding-top: 40px;
+  padding-bottom: 150px;
+}
+
+.home__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.home__top__right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.home__top__right input {
+  padding: 8px 16px;
+  outline: none;
+}
+.home__top__right button {
+  padding: 8px 16px;
+}
+
+.home__total {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 48px;
+  border-radius: 4px;
+  background-color: aqua;
+}
+
+.home__body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.home__card {
+  margin-bottom: 64px;
+}
+.home__card p {
+  color: black;
+}
+.home__card__img {
+  width: 100%;
+  height: 120px;
+  position: relative;
+  padding: 12px;
+  background: url("../../assets/images/najottalim.jpg") no-repeat;
+  background-position: 0px 40%;
+  background-color: black;
+  background-size: cover;
+  text-align: center;
+}
+.home__card__img img {
+  position: absolute;
+  width: 128px;
+  height: 128px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  bottom: -50%;
+  right: 35.2%;
+  border-radius: 50%;
+}
+.home__card__info {
+  padding-top: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  background-color: #FFFFFF;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.home__card__btns {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+.home__card__btns button {
+  padding: 12px 24px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination button {
+  padding: 12px;
+  border: none;
+  background-color: transparent;
+}
+.pagination button.active {
+  background-color: blue;
+}
+
+.editBtn {
+  color: green;
+  background-color: transparent;
+  border: none;
+  border-radius: 3px;
+  transition: 0.2s;
+}
+.editBtn:hover, .editBtn:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em green;
+  transform: translateY(-0.25em);
+}
+
+.changePage {
+  color: blue;
+  background-color: transparent;
+  border: none;
+  border-radius: 3px;
+  transition: 0.2s;
+}
+.changePage:hover, .changePage:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em blue;
+  transform: translateY(-0.25em);
+}
+
+.deleteBtn {
+  color: red;
+  background-color: transparent;
+  border: none;
+  border-radius: 3px;
+  transition: 0.2s;
+}
+.deleteBtn:hover, .deleteBtn:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em red;
+  transform: translateY(-0.25em);
+}
+
+@media (max-width: 1100px) {
+  .home__body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .home__top {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 24px;
+  }
+  .home__top__right {
+    padding: 0 10px;
+  }
+  .home__body {
+    grid-template-columns: 1fr;
+  }
+  .home__card__img img {
+    left: calc(50% - 70px);
+  }
+}
+@media (max-width: 500px) {
+  .modal__content__top {
+    gap: 60px;
+    margin-bottom: 16px;
+  }
+  .modal__content {
+    padding: 24px;
+  }
+  .home__top {
+    display: block;
+  }
+  .home__top__left {
+    margin-bottom: 24px;
+  }
+  .home__top__left h2 {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  .home__search {
+    width: 100%;
+    height: 100%;
+  }
+  .home__top__right {
+    padding: 0 10px;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+  .home__top__right input {
+    width: 100%;
+    height: 100%;
+  }
+}
