@@ -180,7 +180,22 @@ form {
   }
 }
 
-.editBtn {
+.modal-btn {
+  color: green;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid green;
+  border-radius: 3px;
+  transition: 0.2s;
+  &:hover,
+  &:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em green;
+    transform: translateY(-0.25em); 
+  }
+}
+
+.editBtn, 
+.modal__btn {
   color: green;
   background-color: transparent;
   border: none;
@@ -193,7 +208,7 @@ form {
   }
 }
 
-.changePage {
+.changePage,.cancel-btn {
   color: blue;
   background-color: transparent;
   border: none;

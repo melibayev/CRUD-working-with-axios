@@ -18,8 +18,16 @@ a {
   text-decoration: none;
 }
 
+input::-moz-placeholder {
+  font-family: "montserrat";
+}
+
+input:-ms-input-placeholder {
+  font-family: "montserrat";
+}
+
 h1, h2, h3, h4, h5, h6,
-p, a, span button {
+p, a, span button, input::placeholder, label {
   font-family: "montserrat";
 }
 
@@ -211,26 +219,42 @@ form input {
   background-color: blue;
 }
 
-.editBtn {
+.modal-btn {
+  color: green;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid green;
+  border-radius: 3px;
+  transition: 0.2s;
+}
+.modal-btn:hover, .modal-btn:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em green;
+  transform: translateY(-0.25em);
+}
+
+.editBtn,
+.modal__btn {
   color: green;
   background-color: transparent;
   border: none;
   border-radius: 3px;
   transition: 0.2s;
 }
-.editBtn:hover, .editBtn:focus {
+.editBtn:hover, .editBtn:focus,
+.modal__btn:hover,
+.modal__btn:focus {
   box-shadow: 0 0.5em 0.5em -0.4em green;
   transform: translateY(-0.25em);
 }
 
-.changePage {
+.changePage, .cancel-btn {
   color: blue;
   background-color: transparent;
   border: none;
   border-radius: 3px;
   transition: 0.2s;
 }
-.changePage:hover, .changePage:focus {
+.changePage:hover, .changePage:focus, .cancel-btn:hover, .cancel-btn:focus {
   box-shadow: 0 0.5em 0.5em -0.4em blue;
   transform: translateY(-0.25em);
 }

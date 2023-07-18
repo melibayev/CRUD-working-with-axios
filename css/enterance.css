@@ -18,8 +18,16 @@ a {
   text-decoration: none;
 }
 
+input::-moz-placeholder {
+  font-family: "montserrat";
+}
+
+input:-ms-input-placeholder {
+  font-family: "montserrat";
+}
+
 h1, h2, h3, h4, h5, h6,
-p, a, span button {
+p, a, span button, input::placeholder, label {
   font-family: "montserrat";
 }
 
